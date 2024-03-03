@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 
 //example of model representing table and its columns
 //table name only with underscore, camelCase will be converted to camel_case
+
 @Entity
-@Table(name = "test_table")
+@Table(name = "xddddd")
 public class Person {
 
     //private fields, without notation means they are also column names in the table
