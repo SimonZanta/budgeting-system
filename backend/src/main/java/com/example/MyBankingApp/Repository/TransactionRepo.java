@@ -16,4 +16,9 @@ public interface TransactionRepo extends JpaRepository<Transaction, Long> {
                 "FROM Transaction t " +
                 "WHERE t.budgetPlanId = :id ")
         List<Object[]> findTransactionsSummary(Long id);
+
+        @Query("SELECT SUM(t.transactionValue) "+
+                "FROM Transaction t "+
+                "WHERE t.budgetPlanId = :id ")
+        int sumAllTransactionsById(Long id);
 }
