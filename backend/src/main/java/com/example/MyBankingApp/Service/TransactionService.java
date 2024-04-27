@@ -67,6 +67,7 @@ public class TransactionService {
 
         if(id.isPresent()){
             transaction.setBudgetPlanId(id.get());
+            transactionRepo.save(transaction);
             return transaction;
         }
         throw new ResponseStatusException(
